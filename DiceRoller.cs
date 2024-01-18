@@ -10,15 +10,20 @@ namespace Mission2Assignment
     {
         public static int[] RollDice(int numberOfRolls)
         {
-            int[] results = new int[13]; // Indices 0 and 1 will not be used
+            // Create an array to hold the results of dice rolls
+            // The array has 13 elements, but indices 0 and 1 will not be used
+            int[] results = new int[13]; 
             Random random = new Random();
 
+            // Loop for the number of times specified by numberOfRolls.
             for (int i = 0; i < numberOfRolls; i++)
             {
-                int roll = random.Next(1, 7) + random.Next(1, 7); // Rolling two 6-sided dice
+                // Simulate rolling two 6-sided dice and summing their values
+                int roll = random.Next(1, 7) + random.Next(1, 7); 
                 results[roll]++;
             }
 
+            // Return the array of results
             return results;
         }
     }
